@@ -1,3 +1,9 @@
+<% if user_signed_in? %>
+
+Thanks for being a member of our website. 
+
+<% else %>
+
 <div class="jumbotron">
 	<div class="container"> 
 <h1>Welcome to One Month Rails </h1>
@@ -7,9 +13,11 @@
 
 
 
-<%= link_to "Sign Up Now", "http://www.onemonthrails.com", class: "btn btn-primary btn-lg" %>
+<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-lg" %>
 
 </p>
+
+<% end %>
 
 	<div class="footer">
 		<small>
